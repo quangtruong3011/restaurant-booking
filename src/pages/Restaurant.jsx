@@ -31,7 +31,7 @@ const Restaurant = () => {
                 setRestaurant(infoRestaurant.data.data);
 
                 const images = await userService.getImageRestaurant(id);
-                setImages(images.data.data);
+                setImages(images.data.data.reverse());
 
                 const menu = await userService.getAllMenu(id);
                 const formattedMenu = menu.data.data.map((menuItem) => ({
